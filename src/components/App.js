@@ -3,6 +3,7 @@ import Header from "./Header";
 import Signup from "./Signup";
 import Login from "./Login";
 import Database from "./Database";
+import Footer from "./Footer";
 
 class App extends React.Component {
 	constructor(props) {
@@ -83,6 +84,7 @@ class App extends React.Component {
 				<Signup handleSubmit={this.addUser} />
 				<Login loggedIn={loggedIn} currentUser={currentUser} handleSubmit={this.handleLogin} handleLog={this.handleLog} />
 				<Database users={users} />
+				<Footer />
 			</div>
 		);
 	};
