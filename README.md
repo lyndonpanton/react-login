@@ -1,3 +1,28 @@
+# React Login
+
+## How To Open
+> 1. Install node and npm
+> 2. Open your system's terminal
+> 3. Navigate to application's top-level folder in that terminal
+> 4. Run _npm start_ in that folder in the terminal
+> 5. Open _localhost:300_ in a browser to view application
+
+## How To Use
+> 1. Fill in signup form to add a user to the database
+> 2. Use the database to view and delete users
+> 3. Use the login form to sign using a user in the database
+> 4. Press the logout button to logout of that user
+
+## Requirements
+> 1. This application requires a browser, node, npm to run
+> 2. That browser must have Javascript available and enabled
+
+## User Stories
+> 1. Users can view a database
+> 2. Users can add users to that database
+> 3. Users can login using database information
+> 4. Users can sign out of a user
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
