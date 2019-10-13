@@ -95,7 +95,7 @@ class Login extends React.Component {
 			const { password, username } = this.props.currentUser;
 
 			const containerStyling = {
-				margin: "10px 20%",
+				margin: "30px 20%",
 				border: "#FF7700 solid 1px",
 				borderRadius: "6px",
 				textAlign: "center"
