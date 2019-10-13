@@ -44,6 +44,12 @@ class App extends React.Component {
 		});
 	};
 
+	changeTab = (tab) => {
+		this.setState({
+			tab: tab
+		});
+	};
+
 	deleteUser = (index) => {
 		const users = this.state.users.filter((user, userIndex) => {
 			return userIndex !== index;
