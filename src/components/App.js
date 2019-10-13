@@ -42,6 +42,12 @@ class App extends React.Component {
 		this.setState({
 			loggedIn: !loggedIn
 		});
+
+		if (loggedIn) {
+			this.setState({
+				currentUser: {}
+			});
+		}
 	};
 
 	handleLogin = (username, password) => {
