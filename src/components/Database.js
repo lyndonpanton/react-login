@@ -1,6 +1,16 @@
 import React from "react";
 
 const Database = (props) => {
+	const users = props.users.map((user, index) => {
+		return (
+			<tr key={index}>
+				<td>{user.username}</td>
+				<td>{user.password}</td>
+				<td><button>Delete</button></td>
+			</tr>
+		);
+	});
+
 	return (
 		<table>
 			<thead>
@@ -11,7 +21,7 @@ const Database = (props) => {
 				</tr>
 			</thead>
 			<tbody>
-
+				{ users }
 			</tbody>
 			<tfoot>
 				<tr>
