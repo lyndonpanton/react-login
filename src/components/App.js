@@ -98,7 +98,7 @@ class App extends React.Component {
 				<Header name={name} />
 				<Signup handleSubmit={this.addUser} />
 				<Login loggedIn={loggedIn} currentUser={currentUser} handleSubmit={this.handleLogin} handleLog={this.handleLog} />
-				<Database users={users} />
+				<Database users={users} handleDelete={this.deleteUser} />
 				<Footer creation={creation} />
 			</div>
 		);
