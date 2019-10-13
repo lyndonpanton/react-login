@@ -24,7 +24,9 @@ const Navigation = (props) => {
 
 	const navigationItems = props.tabs.map((tab, index) => {
 		return (
-			<li key={index} className={tab.toLowerCase()} style={liStyling}>{tab}</li>
+			<li key={index} className={tab.toLowerCase()} style={liStyling} onClick={() => {
+				props.handleChange(tab);
+			}}>{tab}</li>
 		);
 	});
 
