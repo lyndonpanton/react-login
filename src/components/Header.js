@@ -18,7 +18,7 @@ const Header = (props) => {
 	return (
 		<header style={headerStyling}>
 			<h1 style={headingStyling}>{props.name}</h1>
-			<Navigation tabs={tabs}/>
+			<Navigation tabs={tabs} handleChange={props.handleChange}/>
 		</header>
 	);
 };
