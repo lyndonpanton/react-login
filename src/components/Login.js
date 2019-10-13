@@ -12,11 +12,11 @@ class Login extends React.Component {
 	render() {
 		return (
 			<form>
-				<label for="l-username">
+				<label htmlFor="l-username">
 					<input type="text" name="l-username" />
 				</label>
 
-				<label for="l-password">
+				<label htmlFor="l-password">
 					<input type="password" name="l-password" />
 				</label>
 
