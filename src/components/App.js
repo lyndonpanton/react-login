@@ -46,13 +46,13 @@ class App extends React.Component {
 
 		const login = users.filter((user, index) => {
 			if (user.username === username && user.password === password) {
-				return true;
+				return user;
 			} else {
 				return false;
 			}
 		});
 
-		if (login.indexOf(true) !== -1) {
+		if (login.length !== 0) {
 			this.handleLog();
 			return true;
 		} else {
