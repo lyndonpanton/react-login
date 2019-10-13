@@ -63,7 +63,7 @@ class Login extends React.Component {
 						<p>Your username is: { username }</p>
 						<p>Your password is: { password }</p>
 					</div>
-					<button>Logout</button>
+					<button onClick={this.props.handleLog}>Logout</button>
 				</div>
 			);
 		}
