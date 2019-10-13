@@ -9,6 +9,11 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			creation: {
+				author: "Lyndon Panton",
+				rights: "All Rights Reserved",
+				year: (new Date()).getFullYear()
+			},
 			currentUser: {
 
 			},
@@ -76,7 +81,7 @@ class App extends React.Component {
 	};
 
 	render() {
-		const { currentUser, loggedIn, name, users } = this.state;
+		const { creation, currentUser, loggedIn, name, users } = this.state;
 
 		return (
 			<div className="app">
@@ -84,7 +89,7 @@ class App extends React.Component {
 				<Signup handleSubmit={this.addUser} />
 				<Login loggedIn={loggedIn} currentUser={currentUser} handleSubmit={this.handleLogin} handleLog={this.handleLog} />
 				<Database users={users} />
-				<Footer />
+				<Footer creation={creation} />
 			</div>
 		);
 	};
