@@ -19,16 +19,7 @@ class App extends React.Component {
 			},
 			loggedIn: false,
 			name: "React Login",
-			users: [
-				{
-					username: "alice",
-					password: "123"
-				},
-				{
-					username: "bob",
-					password: "456"
-				}
-			],
+			users: [],
 			tab: "Signup"
 		};
 	};
