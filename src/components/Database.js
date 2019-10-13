@@ -31,7 +31,9 @@ const Database = (props) => {
 			<tr key={index} style={rowStyling}>
 				<td style={cellStyling}>{user.username}</td>
 				<td style={cellStyling}>{user.password}</td>
-				<td style={cellStyling}><button style={deleteStyling}>Delete</button></td>
+				<td style={cellStyling}><button style={deleteStyling} onClick={() => {
+					props.handleDelete(index);
+				}}>Delete</button></td>
 			</tr>
 		);
 	});
