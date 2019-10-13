@@ -2,9 +2,10 @@ import React from "react";
 
 const Database = (props) => {
 	const tableStyling = {
+		margin: "10px auto",
 		border: "#000000 solid 1px",
 		borderCollapse: "collapse",
-		width: "100%",
+		width: "95%",
 		textAlign: "center"
 	};
 
