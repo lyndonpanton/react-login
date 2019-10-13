@@ -107,7 +107,7 @@ class App extends React.Component {
 
 		return (
 			<div className="app">
-				<Header name={name} />
+				<Header name={name} handleChange={this.changeTab} />
 
 				{ tab === "Signup" && <Signup handleSubmit={this.addUser} /> }
 				{ tab === "Login" && <Login loggedIn={loggedIn} currentUser={currentUser} handleSubmit={this.handleLogin} handleLog={this.handleLog} /> }
