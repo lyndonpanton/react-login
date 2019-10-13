@@ -54,12 +54,14 @@ class Login extends React.Component {
 				</form>
 			);
 		} else {
+			const { password, username } = this.props.currentUser;
+
 			return (
 				<div>
 					<h2>Welcome Back</h2>
 					<div>
-						<p>Your username is: </p>
-						<p>Your password is: </p>
+						<p>Your username is: { username }</p>
+						<p>Your password is: { password }</p>
 					</div>
 				</div>
 			);
