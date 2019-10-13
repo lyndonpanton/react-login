@@ -21,12 +21,12 @@ class App extends React.Component {
 			name: "React Login",
 			users: [
 				{
-					username: "alicealison",
-					password: "01234"
+					username: "alice",
+					password: "123"
 				},
 				{
-					username: "bobbobson",
-					password: "56789"
+					username: "bob",
+					password: "456"
 				}
 			],
 			tab: "Signup"
