@@ -1,31 +1,56 @@
 import React from "react";
 
 const Database = (props) => {
+	const tableStyling = {
+		border: "#000000 solid 1px",
+		borderCollapse: "collapse",
+		width: "100%",
+		textAlign: "center"
+	};
+
+	const rowStyling = {
+		border: "#000000 solid 1px"
+	};
+
+	const cellStyling = {
+		border: "#000000 solid 1px",
+		padding: "15px 10px"
+	};
+
+	const deleteStyling = {
+		border: "#4682B4 solid 2px",
+		borderRadius: "3px",
+		padding: "10px 25px",
+		backgroundColor: "#AA55AA",
+		fontSize: "1em",
+		color: "#FFFFFF"
+	};
+
 	const users = props.users.map((user, index) => {
 		return (
-			<tr key={index}>
-				<td>{user.username}</td>
-				<td>{user.password}</td>
-				<td><button>Delete</button></td>
+			<tr key={index} style={rowStyling}>
+				<td style={cellStyling}>{user.username}</td>
+				<td style={cellStyling}>{user.password}</td>
+				<td style={cellStyling}><button style={deleteStyling}>Delete</button></td>
 			</tr>
 		);
 	});
 
 	return (
-		<table>
+		<table style={tableStyling}>
 			<thead>
-				<tr>
-					<td>Username</td>
-					<td>Password</td>
-					<td>Delete</td>
+				<tr style={rowStyling}>
+					<td style={cellStyling}>Username</td>
+					<td style={cellStyling}>Password</td>
+					<td style={cellStyling}>Delete</td>
 				</tr>
 			</thead>
 			<tbody>
 				{ users }
 			</tbody>
 			<tfoot>
-				<tr>
-					<td colSpan="3">This table is rendered using ReactJS</td>
+				<tr style={rowStyling}>
+					<td colSpan="3" style={cellStyling}>This table is rendered using ReactJS</td>
 				</tr>
 			</tfoot>
 		</table>
