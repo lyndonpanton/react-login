@@ -43,6 +43,16 @@ class App extends React.Component {
 		});
 	};
 
+	deleteUser = (index) => {
+		const users = this.state.users.filter((user, userIndex) => {
+			return userIndex !== index;
+		});
+
+		this.setState({
+			users: users
+		});
+	};
+
 	handleLog = () => {
 		const loggedIn = this.state.loggedIn;
 
