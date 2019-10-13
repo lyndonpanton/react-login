@@ -39,6 +39,10 @@ class Signup extends React.Component {
 	render() {
 		const { username, password } = this.state;
 
+		const legendStyling = {
+			textAlign: "center"
+		};
+
 		const inputStyling = {
 			display: "block",
 			margin: "20px auto",
@@ -73,12 +77,13 @@ class Signup extends React.Component {
 
 		return (
 			<form onSubmit={this.handleSubmit} style={formStyling}>
+				<legend style={legendStyling}>Sign Up</legend>
 				<label htmlFor="s-username">
-					<input type="text" name="username" value={username} style={inputStyling} onChange={this.handleChange} />
+					<input type="text" name="username" value={username} placeholder="Username" style={inputStyling} onChange={this.handleChange} />
 				</label>
 
 				<label htmlFor="s-password">
-					<input type="password" name="password" value={password} style={inputStyling} onChange={this.handleChange} />
+					<input type="password" name="password" value={password} placeholder="Password" style={inputStyling} onChange={this.handleChange} />
 				</label>
 
 				<input type="submit" value="Add User" style={submitStyling} />
