@@ -33,6 +33,14 @@ class App extends React.Component {
 		});
 	};
 
+	handleLog = () => {
+		const loggedIn = this.state.loggedIn;
+
+		this.setState({
+			loggedIn: !loggedIn
+		});
+	};
+
 	render() {
 		const { loggedIn, name } = this.state;
 
