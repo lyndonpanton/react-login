@@ -63,6 +63,7 @@ class Login extends React.Component {
 						<p>Your username is: { username }</p>
 						<p>Your password is: { password }</p>
 					</div>
+					<button>Logout</button>
 				</div>
 			);
 		}
