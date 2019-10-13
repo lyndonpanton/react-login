@@ -80,7 +80,7 @@ class App extends React.Component {
 			<div className="app">
 				<Header name={name} />
 				<Signup handleSubmit={this.addUser} />
-				<Login loggedIn={loggedIn} currentUser={currentUser} handleSubmit={this.handleLogin} />
+				<Login loggedIn={loggedIn} currentUser={currentUser} handleSubmit={this.handleLogin} handleLog={this.handleLog} />
 			</div>
 		);
 	};
