@@ -34,14 +34,26 @@ class App extends React.Component {
 	};
 
 	addUser = (username, password) => {
-		const users = this.state.users.concat([{
-			username: username,
-			password: password
-		}]);
-
-		this.setState({
-			users: users
+		let exists = false;
+		this.state.users.forEach((user, index) => {
+			if (username === user.username) {
+				exists = true;
+				return;
+			}
 		});
+
+		if (!exists) {
+			const users = this.state.users.concat([{
+				username: username,
+				password: password
+			}]);
+
+			this.setState({
+				users: users
+			});
+		} else {
+			console.log("user already exists");
+		}
 	};
 
 	changeTab = (tab) => {
