@@ -22,15 +22,17 @@ class Signup extends React.Component {
 
 		const { username, password } = this.state;
 
-		if (username.indexOf(" ") !== -1 || password.indexOf(" ") !== -1) {
+		if (username === "" || password === "") {
+			console.log("fields must not be empty");
+		} else if (username.indexOf(" ") !== -1 || password.indexOf(" ") !== -1) {
+			console.log("fields mus not contain spaces")
+		} else {
 			this.props.handleSubmit(username, password);
 
 			this.setState({
 				username: "",
 				password: ""
 			});
-		} else {
-			console.log("username must not contain spaces");
 		}
 	};
 
