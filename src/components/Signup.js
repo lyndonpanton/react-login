@@ -1,6 +1,14 @@
 import React from "react";
 
 class Signup extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			username: "",
+			password: ""
+		};
+	};
+
 	render() {
 		return (
 			<form>
@@ -15,7 +23,7 @@ class Signup extends React.Component {
 				<input type="submit" value="Add User" />
 			</form>
 		);
-	}
+	};
 };
 
 export default Signup;
