@@ -17,11 +17,29 @@ class Login extends React.Component {
 		});
 	};
 
+	handleSubmit = (event) => {
+		event.preventDefault();
+
+		const { username, password } = this.state;
+
+		if (this.props.handleSubmit(username, password)) {
+			this.setState({
+				username: "",
+				password: ""
+			});
+		} else {
+			// only reset password
+			this.setState({
+				password: ""
+			});
+		}
+	};
+
 	render() {
 		const { username, password } = this.state;
 
 		return (
-			<form>
+			<form onSubmit={this.handleSubmit}>
 				<label htmlFor="l-username">
 					<input type="text" name="username" value={username} onChange={this.handleChange} />
 				</label>
