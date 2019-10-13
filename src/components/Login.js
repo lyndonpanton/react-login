@@ -94,14 +94,21 @@ class Login extends React.Component {
 		} else {
 			const { password, username } = this.props.currentUser;
 
+			const containerStyling = {
+				margin: "10px 20%",
+				border: "#FF7700 solid 1px",
+				borderRadius: "6px",
+				textAlign: "center"
+			};
+
 			return (
-				<div>
+				<div style={containerStyling}>
 					<h2>Welcome Back</h2>
 					<div>
 						<p>Your username is: { username }</p>
 						<p>Your password is: { password }</p>
 					</div>
-					<button onClick={this.props.handleLog}>Logout</button>
+					<button style={submitStyling} onClick={this.props.handleLog}>Logout</button>
 				</div>
 			);
 		}
