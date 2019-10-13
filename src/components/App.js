@@ -41,6 +41,24 @@ class App extends React.Component {
 		});
 	};
 
+	handleLogin = (username, password) => {
+		const users = this.state.users;
+
+		const login = users.filter((user, index) => {
+			if (user.username === username && user.password === password) {
+				return true;
+			} else {
+				return false;
+			}
+		});
+
+		if (login.indexOf(true) !== -1) {
+			this.handleLog();
+		} else {
+			// error
+		}
+	};
+
 	render() {
 		const { loggedIn, name } = this.state;
 
