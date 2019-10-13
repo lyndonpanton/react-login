@@ -92,14 +92,25 @@ class App extends React.Component {
 	};
 
 	render() {
-		const { creation, currentUser, loggedIn, name, users } = this.state;
+		const { creation, currentUser, loggedIn, name, users, tab } = this.state;
+		const errorStyling = {
+			padding: "100px 0",
+			textAlign: "center",
+			fontSize: "1.5em"
+		};
 
 		return (
 			<div className="app">
 				<Header name={name} />
-				<Signup handleSubmit={this.addUser} />
-				<Login loggedIn={loggedIn} currentUser={currentUser} handleSubmit={this.handleLogin} handleLog={this.handleLog} />
-				<Database users={users} handleDelete={this.deleteUser} />
+
+				{ tab === "Signup" && <Signup handleSubmit={this.addUser} /> }
+				{ tab === "Login" && <Login loggedIn={loggedIn} currentUser={currentUser} handleSubmit={this.handleLogin} handleLog={this.handleLog} /> }
+				{ tab === "Database" && <Database users={users} handleDelete={this.deleteUser} /> }
+				{ (tab !== "Signup" && tab !== "Login" && tab !== "Database") && 
+					<div>
+						<p style={errorStyling}>Error: tab not recognised</p>
+					</div>
+				}
 				<Footer creation={creation} />
 			</div>
 		);
