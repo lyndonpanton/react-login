@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "./Header";
 
 class App extends React.Component {
 	constructor(props) {
@@ -19,9 +20,11 @@ class App extends React.Component {
 	};
 
 	render() {
+		const { name } = this.state;
+
 		return (
 			<div className="app">
-				<h1>React Login</h1>
+				<Header name={name} />
 			</div>
 		);
 	};
