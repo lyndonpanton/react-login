@@ -54,8 +54,10 @@ class App extends React.Component {
 
 		if (login.indexOf(true) !== -1) {
 			this.handleLog();
+			return true;
 		} else {
 			// unsuccessful
+			return false;
 		}
 	};
 
