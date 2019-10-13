@@ -7,6 +7,9 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			currentUser: {
+
+			},
 			loggedIn: false,
 			name: "React Login",
 			users: [
@@ -53,10 +56,13 @@ class App extends React.Component {
 		});
 
 		if (login.length !== 0) {
+			this.setState({
+				currentUser: login[0]
+			});
+
 			this.handleLog();
 			return true;
 		} else {
-			// unsuccessful
 			return false;
 		}
 	};
