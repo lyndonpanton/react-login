@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Signup from "./Signup";
 import Login from "./Login";
+import Database from "./Database";
 
 class App extends React.Component {
 	constructor(props) {
@@ -74,13 +75,14 @@ class App extends React.Component {
 	};
 
 	render() {
-		const { currentUser, loggedIn, name } = this.state;
+		const { currentUser, loggedIn, name, users } = this.state;
 
 		return (
 			<div className="app">
 				<Header name={name} />
 				<Signup handleSubmit={this.addUser} />
 				<Login loggedIn={loggedIn} currentUser={currentUser} handleSubmit={this.handleLogin} handleLog={this.handleLog} />
+				<Database users={users} />
 			</div>
 		);
 	};
