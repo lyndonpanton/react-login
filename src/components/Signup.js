@@ -17,11 +17,24 @@ class Signup extends React.Component {
 		});
 	};
 
+	handleSubmit = (event) => {
+		event.preventDefault();
+
+		const { username, password } = this.state;
+
+		this.props.handleSubmit(username, password);
+
+		this.setState({
+			username: "",
+			password: ""
+		});
+	};
+
 	render() {
 		const { username, password } = this.state;
 
 		return (
-			<form>
+			<form onSubmit={this.handleSubmit}>
 				<label htmlFor="s-username">
 					<input type="text" name="username" value={username} onChange={this.handleChange} />
 				</label>
