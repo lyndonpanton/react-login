@@ -22,11 +22,11 @@ class Signup extends React.Component {
 
 		return (
 			<form>
-				<label for="s-username">
+				<label htmlFor="s-username">
 					<input type="text" name="username" value={username} onChange={this.handleChange} />
 				</label>
 
-				<label for="s-password">
+				<label htmlFor="s-password">
 					<input type="password" name="password" value={password} onChange={this.handleChange} />
 				</label>
 
