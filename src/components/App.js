@@ -55,7 +55,7 @@ class App extends React.Component {
 		if (login.indexOf(true) !== -1) {
 			this.handleLog();
 		} else {
-			// error
+			// unsuccessful
 		}
 	};
 
@@ -66,7 +66,7 @@ class App extends React.Component {
 			<div className="app">
 				<Header name={name} />
 				<Signup handleSubmit={this.addUser} />
-				<Login loggedIn={loggedIn} />
+				<Login loggedIn={loggedIn} handleSubmit={this.handleLogin} />
 			</div>
 		);
 	};
