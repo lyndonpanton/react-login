@@ -7,8 +7,8 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			name: "React Login",
 			loggedIn: false,
+			name: "React Login",
 			users: [
 				{
 					username: "alicealison",
@@ -34,13 +34,13 @@ class App extends React.Component {
 	};
 
 	render() {
-		const { name } = this.state;
+		const { loggedIn, name } = this.state;
 
 		return (
 			<div className="app">
 				<Header name={name} />
 				<Signup handleSubmit={this.addUser} />
-				<Login />
+				<Login loggedIn={loggedIn} />
 			</div>
 		);
 	};
