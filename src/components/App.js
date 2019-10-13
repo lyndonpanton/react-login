@@ -28,7 +28,8 @@ class App extends React.Component {
 					username: "bobbobson",
 					password: "56789"
 				}
-			]
+			],
+			tab: "Signup"
 		};
 	};
 
