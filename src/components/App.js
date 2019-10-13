@@ -68,13 +68,13 @@ class App extends React.Component {
 	};
 
 	render() {
-		const { loggedIn, name } = this.state;
+		const { currentUser, loggedIn, name } = this.state;
 
 		return (
 			<div className="app">
 				<Header name={name} />
 				<Signup handleSubmit={this.addUser} />
-				<Login loggedIn={loggedIn} handleSubmit={this.handleLogin} />
+				<Login loggedIn={loggedIn} currentUser={currentUser} handleSubmit={this.handleLogin} />
 			</div>
 		);
 	};
