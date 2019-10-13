@@ -81,11 +81,11 @@ class Login extends React.Component {
 					<legend style={legendStyling}>Login</legend>
 
 					<label htmlFor="l-username">
-						<input type="text" name="username" value={username} style={inputStyling} onChange={this.handleChange} />
+						<input type="text" name="username" value={username} placeholder="Username" style={inputStyling} onChange={this.handleChange} />
 					</label>
 
 					<label htmlFor="l-password">
-						<input type="password" name="password" value={password} style={inputStyling} onChange={this.handleChange} />
+						<input type="password" name="password" value={password} placeholder="Password" style={inputStyling} onChange={this.handleChange} />
 					</label>
 
 					<input type="submit" value="Login" style={submitStyling} />
