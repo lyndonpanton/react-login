@@ -20,13 +20,24 @@ class App extends React.Component {
 		};
 	};
 
+	addUser = (username, password) => {
+		const users = this.state.users.concat([{
+			username: username,
+			password: password
+		}]);
+
+		this.setState({
+			users: users
+		});
+	};
+
 	render() {
 		const { name } = this.state;
 
 		return (
 			<div className="app">
 				<Header name={name} />
-				<Signup />
+				<Signup handleSubmit={this.addUser} />
 			</div>
 		);
 	};
