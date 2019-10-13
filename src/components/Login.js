@@ -39,20 +39,56 @@ class Login extends React.Component {
 		const { username, password } = this.state;
 		const loggedIn = (this.props.loggedIn);
 
+		const legendStyling = {
+			textAlign: "center"
+		};
+
+		const inputStyling = {
+			display: "block",
+			margin: "20px auto",
+			border: "#8888FF solid 1px",
+			borderRadius: "4px",
+			width: "170px",
+			height: "30px",
+			textAlign: "center",
+			fontFamily: "Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif",
+			fontSize: "1em"
+		};
+
+		const submitStyling = {
+			display: "block",
+			margin: "20px auto",
+			border: "#BCBCBC solid 1px",
+			borderRadius: "5px",
+			padding: "8px 20px",
+			backgroundColor: "#EEFFEE",
+			fontSize: "1em",
+			color: "#454545"
+		};
+
+		const formStyling = {
+			margin: "30px auto",
+			border: "#FFAAAA solid 1px",
+			borderRadius: "4px",
+			padding: "20px 0px",
+			width: "200px",
+			backgroundColor: "#AAAAFF",
+		};
+
 		if (!loggedIn) {
 			return (
-				<form onSubmit={this.handleSubmit}>
-					<legend>Login</legend>
-					
+				<form style={formStyling} onSubmit={this.handleSubmit}>
+					<legend style={legendStyling}>Login</legend>
+
 					<label htmlFor="l-username">
-						<input type="text" name="username" value={username} onChange={this.handleChange} />
+						<input type="text" name="username" value={username} style={inputStyling} onChange={this.handleChange} />
 					</label>
 
 					<label htmlFor="l-password">
-						<input type="password" name="password" value={password} onChange={this.handleChange} />
+						<input type="password" name="password" value={password} style={inputStyling} onChange={this.handleChange} />
 					</label>
 
-					<input type="submit" value="Login" />
+					<input type="submit" value="Login" style={submitStyling} />
 				</form>
 			);
 		} else {
