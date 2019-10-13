@@ -42,6 +42,8 @@ class Login extends React.Component {
 		if (!loggedIn) {
 			return (
 				<form onSubmit={this.handleSubmit}>
+					<legend>Login</legend>
+					
 					<label htmlFor="l-username">
 						<input type="text" name="username" value={username} onChange={this.handleChange} />
 					</label>
