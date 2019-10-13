@@ -3,7 +3,7 @@ import React from "react";
 const Navigation = (props) => {
 	const navigationItems = props.tabs.map((tab, index) => {
 		return (
-			<li key={index} className={tab.toLowercase()}>{tab}</li>
+			<li key={index} className={tab.toLowerCase()}>{tab}</li>
 		);
 	});
 
