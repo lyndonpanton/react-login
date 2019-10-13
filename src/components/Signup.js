@@ -9,15 +9,25 @@ class Signup extends React.Component {
 		};
 	};
 
+	handleChange = (event) => {
+		const { name, value } = event.target;
+
+		this.setState({
+			[name]: value
+		});
+	};
+
 	render() {
+		const { username, password } = this.state;
+
 		return (
 			<form>
 				<label for="s-username">
-					<input type="text" />
+					<input type="text" name="username" value={username} onChange={this.handleChange} />
 				</label>
 
 				<label for="s-password">
-					<input type="password" />
+					<input type="password" name="password" value={password} onChange={this.handleChange} />
 				</label>
 
 				<input type="submit" value="Add User" />
